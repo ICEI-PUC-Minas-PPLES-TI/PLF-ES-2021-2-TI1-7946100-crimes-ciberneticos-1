@@ -94,6 +94,29 @@ O software é dedicado a pessoas que não possuem conhecimentos prévios sobre s
 Dentro desse espectro, foram separados quatro principais perfis globais de personas que representam nosso pubico-alvo, estas são:
 
 > Josesclildo
+>
 > Homem, 40 anos
+>
 > Mora em Belo Horizonte
+>
 > É pedreiro
+>
+> renda: 4.000R$
+>
+> fundamental completo
+>
+> industria: engenharia civil
+>
+> desafios: Cuidar dos 5 filhos sozinho, Falta de acesso a informação, Falta de empatia e instrução (alguém para ensinar), Sistemas de difícil manuseio, Falta de Interesse sobre o assunto
+>
+> Pontos de Dor: Se sentir inferior, frustrado e vulnerável, Perde a confiança e a auto-estima, Cai constantemente em ataques de phishing ou pharming, Sofre golpes cibernéticos
+>
+> fontes de inforção: Whatsapp (não confiável e piora as chances de cair em golpes), Conhecidos (pergunta como eles se protegem), Facebook (não confiável)
+>
+> objeções: Não atualiza seus dispositivos por afinidade com o sistema atual, Acha que sistemas de defesa são todos iguais (sempre opta pelos gratuitos)
+>
+> poder de compra: Não pode gastar muito dinheiro com prevenções, Não pode gastar muito dinheiro com dispositivos mais atuais
+>
+> objetivos: Completar o Ensino Medio, Reformar a casa, Busca de enriquecimento, Dar estudo de qualidade pros filhos
+>
+> valores: Falta de conhecimento sobre Crimes Cibernéticos, Falta de Atenção ao operar na internet, Inocente quando ao assunto 
