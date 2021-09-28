@@ -1,19 +1,20 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
+`TÍTULO DO PROJETO`
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`CURSO`
+`Engenharia de Software`
 
-`SEMESTRE`
+`Primeiro Semestre`
 
 ## Participantes
 
-Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
+Os membros do grupo são:
+- Diego Leal Rodrigues
+- Eduardo Puig Esteves
+- Hitalo Silveira Porto
+- Matheus Vieira dos Santos
+- Ryann Victor de Almeida Parreira
 
 # Estrutura do Documento
 
