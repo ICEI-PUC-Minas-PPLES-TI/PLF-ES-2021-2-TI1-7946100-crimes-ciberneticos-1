@@ -7,8 +7,9 @@
 > com a apresentação do projeto contemplando todos os
 > itens trabalhados nos demais artefatos.
 
-## Título do Projeto
+## Título do Projeto 
 > Nome e marca do projeto
+Crimes Cibernéticos
 
 ## Identidade Visual (Marca, Design)
 > O grupo deve ter o cuidado em utilizar figuras, imagens, e
@@ -26,6 +27,9 @@
 > a importância da descrição clara de todo o andamento do projeto,
 > insumos gerados e requisitos atendidos.
 > 
+
+O trabalho tem 8 slides no power point, e ainda vamos apresentar mais sobre  o projeto no figma.
+
 > **Links Úteis**:
 > - [A regra 10-20-30 para apresentações de sucesso](https://revistapegn.globo.com/Noticias/noticia/2014/07/regra-10-20-30-para-apresentacoes-de-sucesso.html)
 > - [Top Tips for Effective Presentations](https://www.skillsyouneed.com/present/presentation-tips.html)
