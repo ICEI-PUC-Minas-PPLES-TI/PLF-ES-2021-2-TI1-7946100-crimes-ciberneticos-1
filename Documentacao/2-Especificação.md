@@ -11,20 +11,20 @@ Nesta etapa, iremos focar sobre as personas, histórias dos usuários,�
 
 ## Personas
 
--Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em
+- Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em
  se desenvolver profissionalmente através de um mestrado fora do país,
  pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está
  buscando uma agência que o ajude a encontrar universidades na Europa
  que aceitem alunos estrangeiros.
 
--Josesclildo tem 40 anos, é pedreiro e trabalha no ramo da engenharia civil.
+- Josesclildo tem 40 anos, é pedreiro e trabalha no ramo da engenharia civil.
  Ele é pai solteiro e tem 5 filhos e seu sonho é prover um ensino de qualidade
  a seus filhos, algo que ele não teve. Busca o enriquecimento para ter uma 
  aposentadoria tranquila e reformar sua casa, e nas horas livres gosta de pesquisar
  notícias sobre seu time e comprar alguns produtos pela internet. Mas adquiriu um receio 
  em comprar por já ter sofrido golpes pela internet.
 
--Jeruza tem 75 anos, é e uma professora univesitária aposentada. Ela leva
+- Jeruza tem 75 anos, é e uma professora univesitária aposentada. Ela leva
 uma vida bastante tranquila com seu marido e ama passar mais tempo com seus netos.
 O objetivo de Jeruza é dar suporte para sua família tanto emocionalmente,
 quanto financeiramente. É uma pessoa muito honesta e caridosa, além de se importar
