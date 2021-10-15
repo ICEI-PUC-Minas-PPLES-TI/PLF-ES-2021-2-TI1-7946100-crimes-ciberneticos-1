@@ -40,7 +40,7 @@ const fetchIsCompletedInfo = (questions) => {
 
 const filterAlreadyDoneQuestions = (questions) => {
     const questionsWithCompleteInformation = fetchIsCompletedInfo(questions);
-    return questions.reduce((acc, cur) => {
+    return questionsWithCompleteInformation.reduce((acc, cur) => {
         cur.completed ? acc.alreadyDone.push(cur) : acc.neverDone.push(cur);
         return acc;
     }, { alreadyDone: [], neverDone: [] });
