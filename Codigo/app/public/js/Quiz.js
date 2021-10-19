@@ -87,6 +87,8 @@ const fetchQuestions = (type, challenge) => {
 };
 
 const checkResult = (questions, index, answer) => {
+    endTimeCount(questions[index].id);
+
     if (questions[index].correctAnswersIndex.indexOf(answer) > -1) {
         // incrementUserHits();
         // addAnsweredQuestion(question);
@@ -137,6 +139,7 @@ const renderQuestions = (questions, i = 0) => {
     quizQuestion.appendChild(answers);
 
     quizHolder.appendChild(quizQuestion);
+    startTimeCount(questions[i].id);
 }
 
 const init = () => {
