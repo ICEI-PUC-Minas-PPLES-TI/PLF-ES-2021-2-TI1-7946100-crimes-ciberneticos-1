@@ -1,6 +1,10 @@
 const quizHolder = document.getElementById('quiz');
 const quizSize = 2;
 
+const finish = () => {
+    window.alert("Você encerrou o quiz");
+};
+
 const filterByType = (questions, type) => {
     return questions.filter((quest) => {
         if (quest.type == type) {
@@ -82,38 +86,57 @@ const fetchQuestions = (type, challenge) => {
     return questions;
 };
 
-const checkResult = (question, answer) => {
-    if (question.correctAnswersIndex.indexOf(answer) > -1) {
+const checkResult = (questions, index, answer) => {
+    if (questions[index].correctAnswersIndex.indexOf(answer) > -1) {
         // incrementUserHits();
         // addAnsweredQuestion(question);
-        window.alert(question.success);
+        if (window.confirm(questions[index].success)) {
+            renderQuestions(questions, index + 1);
+        }
         return;
     }
 
     // incrementUserMisses();
-    window.alert(question.failure);
+    if (window.confirm(questions[index].failure)) {
+        questions.push(questions[index]);
+        renderQuestions(questions, index + 1);
+    }
 };
 
-const renderQuestions = (questions) => {
-    for (let i = 0; i < questions.length; i++) {
-        const quizQuestion = document.createElement('div');
-        const question = document.createElement('h3');
-        const answers = document.createElement('div');
-
-        question.innerText = questions[i].question;
-
-        for (let j = 0; j < questions[i].answers.length; j++) {
-            const answer = document.createElement('button');
-            answer.innerText = questions[i].answers[j];
-            answer.onclick = () => checkResult(questions[i], j);
-            answers.appendChild(answer);
-        }
-
-        quizQuestion.appendChild(question);
-        quizQuestion.appendChild(answers);
-
-        quizHolder.appendChild(quizQuestion);
+const clearQuizHolder = () => {
+    if (quizHolder.children.length == 0) {
+        return;
     }
+
+    for (let i = 0; i < quizHolder.children.length; i++) {
+        quizHolder.removeChild(quizHolder.children[i]);
+    }
+};
+
+const renderQuestions = (questions, i = 0) => {
+    clearQuizHolder();
+
+    const quizQuestion = document.createElement('div');
+    const question = document.createElement('h3');
+    const answers = document.createElement('div');
+
+    if (!questions[i]) {
+        return finish();
+    }
+
+    question.innerText = questions[i].question;
+
+    for (let j = 0; j < questions[i].answers.length; j++) {
+        const answer = document.createElement('button');
+        answer.innerText = questions[i].answers[j];
+        answer.onclick = () => checkResult(questions, i, j);
+        answers.appendChild(answer);
+    }
+
+    quizQuestion.appendChild(question);
+    quizQuestion.appendChild(answers);
+
+    quizHolder.appendChild(quizQuestion);
 }
 
 const init = () => {
