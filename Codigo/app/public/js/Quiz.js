@@ -1,8 +1,66 @@
 const quizHolder = document.getElementById('quiz');
-const quizSize = 2;
+const quizSize = 10;
+
+let quizAnsweredQuestions = [];
+
+const renderMetrics = () => {
+    const totals = document.createElement('h3');
+    const totalHits = document.createElement('p');
+    const totalMisses = document.createElement('p');
+    const hitRate = document.createElement('p');
+    const experienceEarned = document.createElement('p');
+    const questHolder = document.createElement('div');
+    const space = document.createElement('br');
+
+    let hitsTot = quizAnsweredQuestions.length;
+    let missesTot = 0;
+    let experienceTot = 0;
+
+    quizAnsweredQuestions.forEach((quest, index) => {
+        const title = document.createElement('h3');
+        const subject = document.createElement('p');
+        const challenge = document.createElement('p');
+        const time = document.createElement('p');
+        const misses = document.createElement('p');
+
+        title.innerText = `Pergunta ${index}`;
+        subject.innerText = `Assunto: ${quest.subject}`;
+        challenge.innerText = `Dificuldade: ${quest.challenge}`;
+        time.innerText = `Tempo Gasto: ${quest.timeElapsed.totalInSec} segundos`;
+        misses.innerText = `Quantidade de Erros: ${quest.misses}`;
+
+        missesTot += quest.misses;
+        experienceTot += quest.experience;
+
+        questHolder.appendChild(title);
+        questHolder.appendChild(subject);
+        questHolder.appendChild(challenge);
+        questHolder.appendChild(time);
+        questHolder.appendChild(misses);
+        questHolder.appendChild(space);
+    });
+
+    let answeredTot = hitsTot + missesTot;
+    let hitRateValue = hitsTot / answeredTot;
+
+    totals.innerText = "Métricas globais do Quiz";
+    totalHits.innerText = `Acertos: ${hitsTot}`;
+    totalMisses.innerText = `Erros: ${missesTot}`;
+    hitRate.innerText = `Taxa de Acertos: ${hitRateValue * 100}%`;
+    experienceEarned.innerText = `Experiência Obtida: ${experienceTot}`;
+
+    quizHolder.appendChild(totals);
+    quizHolder.appendChild(totalHits);
+    quizHolder.appendChild(totalMisses);
+    quizHolder.appendChild(hitRate);
+    quizHolder.appendChild(experienceEarned);
+    quizHolder.appendChild(space);
+    quizHolder.appendChild(questHolder);
+};
 
 const finish = () => {
     window.alert("Você encerrou o quiz");
+    renderMetrics();
 };
 
 const filterByType = (questions, type) => {
@@ -22,7 +80,6 @@ const filterByChallenge = (questions, challenge) => {
 };
 
 const fetchIsCompletedInfo = (questions) => {
-    const user = USERS[0];
     const alreadyAnswered = user.completedQuizzes.questionsAnswered;
     let answeredQuestionsIds = [];
 
@@ -90,16 +147,24 @@ const checkResult = (questions, index, answer) => {
     endTimeCount(questions[index].id);
 
     if (questions[index].correctAnswersIndex.indexOf(answer) > -1) {
-        // incrementUserHits();
-        // addAnsweredQuestion(question);
-        if (window.confirm(questions[index].success)) {
+        const answeredQuestion = {
+            id: questions[index].id,
+            subject: questions[index].subject,
+            challenge: questions[index].challenge,
+            misses: questions[index].misses ?? 0,
+            experience: questions[index].experience
+        };
+        quizAnsweredQuestions.push(answeredQuestion);
+        addAnsweredQuestion(answeredQuestion);
+        saveTimePerQuestion();
+        if (window.confirm(questions[index].success) || true) {
             renderQuestions(questions, index + 1);
         }
         return;
     }
 
-    // incrementUserMisses();
-    if (window.confirm(questions[index].failure)) {
+    if (window.confirm(questions[index].failure) || true) {
+        questions[index].misses ? questions[index].misses += 1 : questions[index].misses = 1;
         questions.push(questions[index]);
         renderQuestions(questions, index + 1);
     }

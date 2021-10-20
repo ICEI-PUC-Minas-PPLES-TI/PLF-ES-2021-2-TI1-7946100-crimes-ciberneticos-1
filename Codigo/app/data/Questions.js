@@ -1,24 +1,27 @@
+/* Modelo
+{
+    id: 0,
+    type: "",
+    subject: "phishing",
+    challenge: 0,
+    priority: 1,
+    question: "",
+    answers: [
+        "",
+        "",
+        "",
+        ""
+    ],
+    correctAnswersIndex: [2],
+    success: "",
+    failure: "",
+    experience: 15
+},
+*/
+
 const QUESTIONS = [
     {
         id: 1,
-        type: "",
-        subject: "phishing",
-        challenge: 0,
-        priority: 1,
-        question: "",
-        answers: [
-            "",
-            "",
-            "",
-            ""
-        ],
-        correctAnswersIndex: [2],
-        success: "",
-        failure: "",
-        experience: 15
-    },
-    {
-        id: 2,
         type: "single",
         subject: "phishing",
         challenge: 0,
@@ -36,7 +39,7 @@ const QUESTIONS = [
         experience: 15
     },
     {
-        id: 3,
+        id: 2,
         type: "single",
         subject: "phishing",
         challenge: 0,
