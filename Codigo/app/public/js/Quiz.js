@@ -10,7 +10,7 @@ const renderMetrics = () => {
     const hitRate = document.createElement('p');
     const experienceEarned = document.createElement('p');
     const questHolder = document.createElement('div');
-    const space = document.createElement('br');
+    const lineBreak = document.createElement('br');
 
     let hitsTot = quizAnsweredQuestions.length;
     let missesTot = 0;
@@ -23,7 +23,7 @@ const renderMetrics = () => {
         const time = document.createElement('p');
         const misses = document.createElement('p');
 
-        title.innerText = `Pergunta ${index}`;
+        title.innerText = `Pergunta ${index + 1}`;
         subject.innerText = `Assunto: ${quest.subject}`;
         challenge.innerText = `Dificuldade: ${quest.challenge}`;
         time.innerText = `Tempo Gasto: ${quest.timeElapsed.totalInSec} segundos`;
@@ -37,7 +37,7 @@ const renderMetrics = () => {
         questHolder.appendChild(challenge);
         questHolder.appendChild(time);
         questHolder.appendChild(misses);
-        questHolder.appendChild(space);
+        questHolder.appendChild(lineBreak);
     });
 
     let answeredTot = hitsTot + missesTot;
@@ -54,7 +54,7 @@ const renderMetrics = () => {
     quizHolder.appendChild(totalMisses);
     quizHolder.appendChild(hitRate);
     quizHolder.appendChild(experienceEarned);
-    quizHolder.appendChild(space);
+    quizHolder.appendChild(lineBreak);
     quizHolder.appendChild(questHolder);
 };
 
@@ -186,6 +186,7 @@ const renderQuestions = (questions, i = 0) => {
     const quizQuestion = document.createElement('div');
     const question = document.createElement('h3');
     const answers = document.createElement('div');
+    const lineBreak = document.createElement('br');
 
     if (!questions[i]) {
         return finish();
@@ -198,6 +199,7 @@ const renderQuestions = (questions, i = 0) => {
         answer.innerText = questions[i].answers[j];
         answer.onclick = () => checkResult(questions, i, j);
         answers.appendChild(answer);
+        answers.appendChild(lineBreak);
     }
 
     quizQuestion.appendChild(question);
