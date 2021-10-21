@@ -7,7 +7,6 @@ const USERS = [
         password: "", /*SHA256*/
         birthDate: "",
         completedQuizzes: {
-            total: 0,
             questionsAnswered: [],
             misses: 0
         },
