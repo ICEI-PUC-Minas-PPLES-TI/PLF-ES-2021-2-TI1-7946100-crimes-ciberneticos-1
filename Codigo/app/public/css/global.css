@@ -1,0 +1,19 @@
+.nav li {
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.nav ul {
+    display: flex;
+    padding: 0;
+    gap: 20px;
+}
+
+header {
+    width: 100%;
+}
