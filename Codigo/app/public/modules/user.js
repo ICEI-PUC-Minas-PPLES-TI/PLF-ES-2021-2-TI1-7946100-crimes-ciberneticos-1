@@ -9,6 +9,7 @@ const getMisses = () => {
 
     return user.completedQuizzes.questionsAnswered.reduce((acc, cur) => {
         acc += cur.misses;
+        return acc;
     }, 0);
 };
 
