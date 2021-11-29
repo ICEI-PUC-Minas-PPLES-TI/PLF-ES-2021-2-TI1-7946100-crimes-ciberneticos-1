@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { CreatePermissionService } from "../services/CreatePermissionService";
 
-export class CreatePermissionController {
+export class CreatePermController {
   async handle(request: Request, response: Response) {
     const { name, description } = request.body;
 
