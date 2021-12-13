@@ -1,18 +1,17 @@
 const USERS = [
     {
         id: 1,
-        type: "",
-        name: "",
+        accessLevel: 1,
+        profileImage: "../img/user-placeholder.png",
+        name: "admin",
         email: "",
-        password: "", /*SHA256*/
-        birthDate: "",
+        password: "U2FsdGVkX18XWg72aBdVDHQHhLk5EjjumyD0CF44t9Y=", /*SHA256*/
         completedQuizzes: {
-            questionsAnswered: [],
+            answeredQuestions: [],
             misses: 0
         },
         experience: 0,
         configurations: {
-            sound: true,
             theme: "light",
             reminders: true,
             tips: false,

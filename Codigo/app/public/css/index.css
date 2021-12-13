@@ -1,0 +1,59 @@
+img {
+    position: absolute;
+    width: 25vw;
+    left: 37.5vw;
+    top: 0;
+}
+
+#loginScreen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--main-color);
+}
+
+.centered {
+    width: 30vw;
+    height: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    background-image: var(--seccondary-color);
+    border-radius: 4vw;
+}
+
+#login, #signin {
+    display: flex;
+    align-items: space-around;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+}
+
+#signin span {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#signin span svg {
+    margin-top: 4px;
+}
+
+@media screen  and (max-width: 799px) {
+    img {
+        width: 70vw;
+        left: 15vw;
+        top: 1vh;
+    }
+
+    .centered {
+        width: 90vw;
+        height: 90vw;
+    }
+}

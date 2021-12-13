@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/user/userProfile.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <div id="userProfile">
+        <div class="header">
+            <a href="./home.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </a>
+            <img src="../img/user-placeholder.png" id="profileImage">
+            <h3 id="userName"></h3>
+        </div>
+
+        <div class="progression">
+            <h5>Progressão</h5>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed accordionMetrics" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                            aria-controls="flush-collapseOne">
+
+                            <span>
+                                <div class="clearfix">
+                                    <div class="float-start">Nível</div>
+                                    <small class="float-end" id="level"></small>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" id="totalProgress" role="progressbar" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </span>
+
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" id="levelBySubject"></div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed accordionMetrics" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                            aria-controls="flush-collapseTwo">
+
+                            <span>
+                                <div class="clearfix">
+                                    <div class="float-start">Perguntas Respondidas</div>
+                                    <small class="float-end" id="answeredQuestions"></small>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" id="answeredQuestionsProgress" role="progressbar"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </span>
+
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" id="answeredQuestionsBySubject"></div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed accordionMetrics" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+
+                            <span>
+                                <div class="clearfix">
+                                    <div class="float-start">Taxa de Acerto</div>
+                                    <small class="float-end" id="hitRate"></small>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" id="hitRateProgress" role="progressbar" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </span>
+
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body" id="hitRateBySubject"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliotecas Externas -->
+    <script src="../js/libs/bootstrap.bundle.min.js"></script>
+
+    <!-- Classes Simuladas -->
+    <script src="../modules/database.js"></script>
+
+    <script src="../js/translations/pt/translate.js"></script>
+    <script src="../js/user/metrics.js"></script>
+    <script src="../js/user/userProfile.js"></script>
+
+    <script>
+        const loggedUser = window.localStorage.getItem('loggedUser');
+
+        if (!loggedUser || loggedUser.length == 0) {
+            let a = document.createElement('a');
+            a.href = '../../index.html';
+            a.click();
+        }
+    </script>
+</body>
+
+</html>
