@@ -10,8 +10,6 @@ Trabalho Interdisciplinar - Aplicacões Web
 ## Participantes
 
 Os membros do grupo são:
-- Diego Leal Rodrigues
-- Eduardo Puig Esteves
 - Hitalo Silveira Porto
 - Matheus Vieira dos Santos
 - Ryann Victor de Almeida Parreira

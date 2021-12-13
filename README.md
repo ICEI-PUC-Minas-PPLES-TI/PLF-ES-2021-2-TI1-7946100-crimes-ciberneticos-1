@@ -5,8 +5,6 @@ Dar conhecimentos suficientes para os usuários não terem mais medo de navegar 
 
 ## Alunos integrantes da equipe
 
-* Diego Leal Rodrigues
-* Eduardo Puig Esteves
 * Hitalo Silveira Porto
 * Matheus Vieira dos Santos
 * Ryann Victor de Almeida Parreira
