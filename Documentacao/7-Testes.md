@@ -149,7 +149,7 @@ GIVEN estar logado no sistema
 WHEN clica na opção `Aprender`
 THEN é redirecionado para a tela de estudos
 
-> Função `Aprender` ainda não foi implementada
+> Funciona Corretamente
 
 ### Caso de Teste: Acessar 'Seu Perfil'
 
@@ -344,4 +344,46 @@ AND removida da listagem abaixo
 
 # Plano de Testes: Estudos
 
-> A ser implementado
+### Caso de Teste: Voltar
+
+GIVEN estar na tela de Aprender
+WHEN clico no botão branco no canto superior esquerdo
+THEN sou redirecionado à página principal
+
+> Funciona Corretamente
+
+### Caso de Teste: Renderização da Tela
+
+GIVEN estar na tela de Aprender
+WHEN a tela é carregada
+THEN uma lista com nomes de assuntos são listados
+
+> Funciona Corretamente
+
+### Caso de Teste: Abrir assunto listado
+
+GIVEN estar na tela de Aprender
+WHEN clico em um dos assuntos listados abaixo
+THEN é renderizado todos os capítulos inseridos sobre o assunto até o momento
+AND aparece no canto superior direito um botão escrito "Fazer Quizz"
+
+> Funciona Corretamente
+
+### Caso de Teste: Voltar após abrir um assunto
+
+GIVEN estar na tela de Aprender
+AND ter clicado em um assunto
+WHEN clico no botão de voltar
+THEN volta pra tela anterior mostrando a listagem de assuntos a serem aprendidos
+
+> Funciona Corretamente
+
+### Caso de Teste: Clicar em "Fazer Quizz"
+
+GIVEN estar na tela de Aprender
+AND ter clicado em um assunto
+WHEN clico no botão "Fazer Quizz"
+THEN é renderizado a página de Quizz
+AND todas as perguntas do questionário são sobre o assunto que estava aberto na página de Aprender
+
+> Funciona Corretamente
