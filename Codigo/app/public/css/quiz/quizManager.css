@@ -1,0 +1,163 @@
+#app {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+#addQuestion {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: space-between;
+    width: 100vw;
+    background-image: var(--main-color);
+    color: white;
+    border-radius: 0 0 4vh 4vh;
+}
+
+.header a {
+    align-self: flex-start;
+    margin: 2%;
+}
+
+.form-step {
+    display: flex;
+    width: 40vw;
+    flex-flow: column-reverse nowrap;
+    margin-right: 3vw;
+    margin-left: 1vw;
+    margin-bottom: 2vh;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.form-step input {
+    outline: 0;
+    width: 40vw;
+    height: 4vh;
+    transition: .5s;
+    border-radius: 4px;
+    border: 2px solid black;
+    background-image: var(--seccondary-color);
+    padding-left: 4%;
+}
+
+#questHolder {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    border: 1px solid silver;
+    border-radius: 8px;
+    width: 40vw;
+    height: 30vh;
+    padding: 2% 1% 1% 1%;
+    margin: 1%;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: scroll;
+    background-image: var(--seccondary-color);
+}
+
+.title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 6%;
+}
+
+.info span {
+    font-size: small;
+}
+
+.cardAnswers {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.cardAnswers * {
+    margin-bottom: 1%;
+    padding: 1%;
+    border-radius: 4px;
+    color: white;
+}
+
+.deleter {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background-color: rgb(236, 236, 236);
+    padding: 2px 0 0 0;
+    margin: 0;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.edit {
+    position: absolute;
+    top: 2px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background-color: rgb(236, 236, 236);
+    padding: 2px 0 0 0;
+    margin: 0;
+    transition: .5s;
+    cursor: pointer;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+input[type=submit]:hover, .deleter:hover, .edit:hover {
+    background-image: var(--main-color);
+    color: white;
+}
+
+@media screen and (max-width: 799px) {
+    .header a {
+        margin: 4%;
+    }
+
+    #addQuestion {
+        flex-flow: column wrap;
+    }
+
+    .form-step, .form-step input {
+        width: 90vw;
+    }
+
+    #questHolder {
+        flex-flow: column wrap;
+        align-content: center;
+    }
+
+    .card {
+        width: 90vw;
+    }
+}
