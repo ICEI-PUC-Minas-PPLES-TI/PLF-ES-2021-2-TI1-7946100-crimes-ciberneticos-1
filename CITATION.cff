@@ -1,0 +1,25 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Crimes Cibernéticos 1
+authors:
+  - family-names: Silveira Porto
+    given-names: Hitalo 
+  - family-names: Vieira dos Santos
+    given-names: Matheus  
+  - family-names: de Almeida Parreira
+    given-names: Ryann Victor     
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vieira Carneiro
+    given-names: Rommel 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Alves Nogueira
+    given-names: Simone  
+keywords:
+  - Crimes
+  - Cibernéticos
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7946100-crimes-ciberneticos-1
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2021-12-22
