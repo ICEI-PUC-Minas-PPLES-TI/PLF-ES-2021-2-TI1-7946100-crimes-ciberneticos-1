@@ -13,6 +13,7 @@ Dar conhecimentos suficientes para os usuários não terem mais medo de navegar 
 
 * Rommel Vieira Carneiro
 * Simone Alves Nogueira
+* Nathália Assis Valentim
 
 ## Instruções de utilização
 
